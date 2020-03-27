@@ -18,6 +18,7 @@
  * 
 */
 let pageSections = document.querySelectorAll('section');
+let sectionTitles = document.querySelectorAll('h2');
 let length = pageSections.length
 let navBarList = document.querySelector('#navbar__list');
 let posArray=[];
@@ -78,7 +79,7 @@ let half_window = window.innerHeight / 2;
 
 document.addEventListener("scroll", () => {
     posArray = [];
-    pageSections.forEach((ele, ind) => {
+    sectionTitles.forEach((ele, ind) => {
       let pos = ele.getBoundingClientRect().top;
       posArray.push(pos);
     });
